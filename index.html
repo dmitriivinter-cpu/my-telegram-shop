@@ -1,150 +1,62 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <!-- Метаданные (Урок №4) -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primo-Dimon Shop</title>
-    
-    <script src="https://telegram.org"></script>
+    <meta name="author" content="Георгий Дударь">
+    <meta name="description" content="Сайт Primo-Dimon: изучение метаданных и комментариев">
+    <meta name="keywords" content="Primo-Dimon, html, обучение, метаданные">
+
+    <title>Primo-Dimon — Урок №4</title>
 
     <style>
+        /* Твой CSS блок */
         body {
+            background-color: #e3f2fd; /* Нежно-голубой цвет */
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
-            margin: 0;
-            background-color: #e3e3e3; 
+            padding-top: 50px;
         }
 
-        /* Стиль для логотипа */
-        .main-logo {
-            height: 25vh; /* Устанавливаем высоту 25% от высоты экрана */
-            width: auto; /* Ширина подстраивается автоматически, чтобы не искажать пропорции */
-            margin-bottom: 20px;
-        }
-
-        h1 { color: #333; }
         button {
-            background-color: #40e0d0;
+            background-color: #40e0d0; /* Бирюзовая кнопка */
             border: none;
-            padding: 15px 30px;
+            padding: 10px 20px;
             color: white;
-            border-radius: 10px;
+            border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
-            font-size: 18px;
+            margin-top: 20px;
         }
 
         .info-block {
-            max-width: 500px;
+            max-width: 600px;
             text-align: center;
             margin-top: 30px;
-            padding: 20px;
-            border-radius: 15px;
-            background-color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
-    <!-- Ваш логотип, вставленный по прямой ссылке с хостинга изображений -->
-    <img src="https://i.imgur.com" alt="Логотип магазина" class="main-logo">
 
-    <h1>Primo-Dimon Shop</h1>
-    <p>Добро пожаловать в мой учебный проект!</p>
+    <!-- Шапка сайта -->
+    <h1>Сайт Primo-Dimon</h1>
+    <p>Добро пожаловать на мой первый проект!</p>
     
-    <button id="main_btn">Купить курс ($5.00)</button>
+    <button>Моя будущая кнопка</button>
 
+    <!-- Новый блок из материалов Урока №4 -->
     <div class="info-block">
-        <hr>
+        <hr> <!-- Линия-разделитель -->
         <h2>Заметки разработчика</h2>
-        <p>Для размера логотипа используется `height: 25vh`, что делает его ровно 1/4 высоты экрана, независимо от модели телефона.</p>
+        <p>Для описания характеристик страницы мы использовали тег <strong>&lt;meta&gt;</strong>. Он сообщает браузеру кодировку и описание сайта.</p>
+        
+        <!-- Ниже пример комментария, который виден только в коде -->
+        <!-- Комментарии помогают другим программистам понять логику сайта -->
+        <p>Также мы научились создавать комментарии. Они делают код чистым и понятным, но важно не нагромождать их слишком много.</p>
     </div>
 
-    <script>
-        let tg = window.Telegram.WebApp;
-        tg.expand(); 
-        document.getElementById("main_btn").addEventListener("click", function(){
-            let data = { item: "Курс itProger", price: 500 };
-            tg.sendData(JSON.stringify(data));
-            tg.close();
-        });
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primo-Dimon Shop</title>
-    
-    <script src="https://telegram.org"></script>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            margin: 0;
-            background-color: #e3e3e3; 
-        }
-
-        /* Стиль для логотипа */
-        .main-logo {
-            height: 25vh; /* Устанавливаем высоту 25% от высоты экрана */
-            width: auto; /* Ширина подстраивается автоматически, чтобы не искажать пропорции */
-            margin-bottom: 20px;
-        }
-
-        h1 { color: #333; }
-        button {
-            background-color: #40e0d0;
-            border: none;
-            padding: 15px 30px;
-            color: white;
-            border-radius: 10px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        .info-block {
-            max-width: 500px;
-            text-align: center;
-            margin-top: 30px;
-            padding: 20px;
-            border-radius: 15px;
-            background-color: rgba(255, 255, 255, 0.9);
-        }
-    </style>
-</head>
-<body>
-    <!-- Ваш логотип, вставленный по прямой ссылке с хостинга изображений -->
-    <img src="https://i.imgur.com" alt="Логотип магазина" class="main-logo">
-
-    <h1>Primo-Dimon Shop</h1>
-    <p>Добро пожаловать в мой учебный проект!</p>
-    
-    <button id="main_btn">Купить курс ($5.00)</button>
-
-    <div class="info-block">
-        <hr>
-        <h2>Заметки разработчика</h2>
-        <p>Для размера логотипа используется `height: 25vh`, что делает его ровно 1/4 высоты экрана, независимо от модели телефона.</p>
-    </div>
-
-    <script>
-        let tg = window.Telegram.WebApp;
-        tg.expand(); 
-        document.getElementById("main_btn").addEventListener("click", function(){
-            let data = { item: "Курс itProger", price: 500 };
-            tg.sendData(JSON.stringify(data));
-            tg.close();
-        });
-    </script>
 </body>
 </html>
