@@ -18,6 +18,16 @@
             flex-direction: column;
             align-items: center;
             padding-top: 50px;
+            margin: 0; /* Убираем стандартные отступы у body */
+        }
+
+        /* Стиль для логотипа */
+        .logo {
+            position: absolute; /* Фиксируем позицию */
+            top: 10px; /* Отступ сверху */
+            left: 10px; /* Отступ слева */
+            width: 80px; /* Задаем небольшой размер (например, 80px) */
+            height: auto; /* Автоматически сохраняем пропорции */
         }
 
         button {
@@ -40,6 +50,8 @@
     </style>
 </head>
 <body>
+    <!-- Добавляем логотип в самом начале body -->
+    <img src="my_logo.png" alt="Логотип Primo-Dimon" class="logo">
 
     <!-- Шапка сайта -->
     <h1>Сайт Primo-Dimon</h1>
